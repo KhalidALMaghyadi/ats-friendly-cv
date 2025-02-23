@@ -1,0 +1,71 @@
+<div class="container">
+    <h2 class="title">Create Your CV</h2>
+    <form (ngSubmit)="saveData()" #cvForm="ngForm">
+     <div class="row d-flex justify-content-center ">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" [(ngModel)]="cvData.firstName" name="firstName" required class="form-control" >
+              </div>    
+          </div>
+      
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" [(ngModel)]="cvData.lastName" name="lastName" required class="form-control">
+              </div>    
+          </div>      
+       </div>
+
+       
+       <div class="row d-flex justify-content-center">
+       
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" [(ngModel)]="cvData.phone" name="phone" required class="form-control" placeholder="+966 5xxxxxxxx">
+                    </div>
+                </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" [(ngModel)]="cvData.email" name="email" required class="form-control" placeholder="example@example.com">
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <label>City (Country)</label>
+                    <input type="text" [(ngModel)]="cvData.city" name="city" required class="form-control" placeholder="example: Riyadh,... .">
+                </div>
+            </div>
+    </div>
+      
+      <div class="form-group">
+        <label>Objective</label>
+        <textarea [(ngModel)]="cvData.objective" name="objective" required class="form-control"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label>Education</label>
+        <textarea [(ngModel)]="cvData.education" name="education" required class="form-control"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label>Skills</label>
+        <textarea [(ngModel)]="cvData.skills" name="skills" required class="form-control"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label>Experience</label>
+        <textarea [(ngModel)]="cvData.experience" name="experience" class="form-control"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label>Courses</label>
+        <textarea [(ngModel)]="cvData.courses" name="courses" class="form-control"></textarea>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
