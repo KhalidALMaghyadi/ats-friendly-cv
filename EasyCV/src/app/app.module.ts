@@ -8,7 +8,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
-
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+import { cvReducer } from './reducers/cv.reducer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,8 +23,11 @@ import { DetailComponent } from './detail/detail.component';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    FormsModule    
-
+    FormsModule, StoreModule.forRoot(reducers, {
+      metaReducers
+    }),
+    StoreModule.forRoot({ cv: cvReducer })    
+    
 
   ],
   providers: [
