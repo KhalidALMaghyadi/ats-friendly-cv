@@ -19,8 +19,9 @@ export class InputdataComponent {
     experience: '',
     courses: ''
   };
-
+ 
   saveData() {
     console.log('CV Data Saved:', this.cvData);
+   
   }
 }

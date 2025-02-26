@@ -1,71 +1,67 @@
-<div class="container">
-    <h2 class="title">Create Your CV</h2>
-    <form (ngSubmit)="saveData()" #cvForm="ngForm">
-     <div class="row d-flex justify-content-center ">
-        <div class="col-sm-6 col-md-4 col-lg-3">
+<app-header></app-header>
+
+<div class="container mt-3 animate__animated animate__fadeIn">
+    <h2 class="title animate__animated animate__fadeInDown">Create Your CV</h2>
+    <form (ngSubmit)="saveData()" #cvForm="ngForm" novalidate>
+     <div class="row d-flex justify-content-center">
+        <div class="col-sm-6 col-md-4 col-lg-3 animate__animated animate__fadeInLeft">
             <div class="form-group">
                 <label>First Name</label>
                 <input type="text" [(ngModel)]="cvData.firstName" name="firstName" required class="form-control" >
-              </div>    
-          </div>
-      
-          <div class="col-sm-6 col-md-4 col-lg-3">
+            </div>    
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 animate__animated animate__fadeInRight">
             <div class="form-group">
                 <label>Last Name</label>
                 <input type="text" [(ngModel)]="cvData.lastName" name="lastName" required class="form-control">
-              </div>    
-          </div>      
-       </div>
+            </div>    
+        </div>      
+     </div>
 
-       
-       <div class="row d-flex justify-content-center">
-       
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="tel" [(ngModel)]="cvData.phone" name="phone" required class="form-control" placeholder="+966 5xxxxxxxx">
-                    </div>
-                </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" [(ngModel)]="cvData.email" name="email" required class="form-control" placeholder="example@example.com">
-                </div>
+     <div class="row d-flex justify-content-center">
+        <div class="col-sm-6 col-md-4 col-lg-3 animate__animated animate__fadeInLeft">
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" [(ngModel)]="cvData.phone" name="phone" required class="form-control" placeholder="+966 5xxxxxxxx">
             </div>
-            
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="form-group">
-                    <label>City (Country)</label>
-                    <input type="text" [(ngModel)]="cvData.city" name="city" required class="form-control" placeholder="example: Riyadh,... .">
-                </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 animate__animated animate__fadeInUp">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" [(ngModel)]="cvData.email" name="email" required class="form-control" placeholder="example@example.com">
             </div>
-    </div>
-      
-      <div class="form-group">
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 animate__animated animate__fadeInRight">
+            <div class="form-group">
+                <label>City (Country)</label>
+                <input type="text" [(ngModel)]="cvData.city" name="city" required class="form-control" placeholder="example: Riyadh,... .">
+            </div>
+        </div>
+     </div>
+
+      <div class="form-group animate__animated animate__fadeInUp">
         <label>Objective</label>
         <textarea [(ngModel)]="cvData.objective" name="objective" required class="form-control"></textarea>
       </div>
-      
-      <div class="form-group">
+      <div class="form-group animate__animated animate__fadeInUp">
         <label>Education</label>
         <textarea [(ngModel)]="cvData.education" name="education" required class="form-control"></textarea>
       </div>
-      
-      <div class="form-group">
+      <div class="form-group animate__animated animate__fadeInUp">
         <label>Skills</label>
         <textarea [(ngModel)]="cvData.skills" name="skills" required class="form-control"></textarea>
       </div>
-      
-      <div class="form-group">
+      <div class="form-group animate__animated animate__fadeInUp">
         <label>Experience</label>
         <textarea [(ngModel)]="cvData.experience" name="experience" class="form-control"></textarea>
       </div>
-      
-      <div class="form-group">
+      <div class="form-group animate__animated animate__fadeInUp">
         <label>Courses</label>
-        <textarea [(ngModel)]="cvData.courses" name="courses" class="form-control"></textarea>
+        <textarea [(ngModel)]="cvData.courses" name="courses" class="form-control" required></textarea>
       </div>
       
-      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="submit" class="btn btn-primary animate__animated animate__bounceIn">Save</button>
     </form>
 </div>
+
+<app-footer></app-footer>
